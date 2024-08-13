@@ -1,9 +1,6 @@
 // Specify where the comments will be posted
 const commentContainer = document.getElementById('comment-container');
-
-// Add event listener to comment button 
 document.getElementById('btn-post').addEventListener('click', function() {
-    // Collect data through variables
     const newComment = document.getElementById('new-comment').value;
 
     if (newComment === '') {
@@ -15,17 +12,9 @@ document.getElementById('btn-post').addEventListener('click', function() {
 
         // Clear comment box
         document.getElementById('new-comment').value = '';
-
-        // Save data
         saveData();
     }
 });
-
-// Capture button click event
-commentContainer.addEventListener('click', function(e) {
-    // Your code for handling clicks on the comment container
-});
- 
 function saveData() {
     localStorage.setItem('data', commentContainer.innerHTML);
 }
